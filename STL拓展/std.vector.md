@@ -1,7 +1,26 @@
 # 输入拓展
 
-![image-20250929205107691](std.vector.assets/image-20250929205107691.png)
+```c++
+template <typename T>
+std::istream& operator>>(std::istream &in, std::vector<T> &v)
+{
+    for (T &t : v)
+    {
+        in >> t;
+    }
+    return in;
+}
+```
 
 # push_back() 拓展
 
-![image-20251003165244172](std.vector.assets/image-20251003165244172.png)
+```c++
+template<typename T, typename K>
+void operator+=(std::vector<T> &v, const K &k)
+{
+	v.push_back(static_cast<T>(k));
+}
+```
+
+
+
