@@ -58,14 +58,16 @@
 # 代码实现
 
 ```c++
+using std::int64_t;
+
 void solve()
 {
     int n;
-    cin >> n;
-    vector<int> as(n);
-    cin >> as;
+    std::cin >> n;
+    std::vector<int> as(n);
+    std::cin >> as;
 
-    vector<int> counts(n + 1);
+    std::vector<int> counts(n + 1);
     for (int a : as)
     {
         ++counts[a];
@@ -82,7 +84,7 @@ void solve()
         ans -= quickPow(2, count, mod) * ((quickPow(2, counts[g], mod) - 1 + mod) % mod) % mod;
         ans += mod; ans %= mod;
     }
-    cout << ans << endl;
+    std::cout << ans << std::endl;
 }
 ```
 
