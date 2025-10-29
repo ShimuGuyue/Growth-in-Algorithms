@@ -3,7 +3,7 @@
 ```c++
 void operator++(std::string &s)
 {
-	s = " " + s;
+    s = " " + s;
 }
 ```
 

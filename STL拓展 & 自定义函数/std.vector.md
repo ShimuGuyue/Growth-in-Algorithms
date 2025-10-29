@@ -12,13 +12,13 @@ std::istream& operator>>(std::istream &in, std::vector<T> &v)
 }
 ```
 
-# push_back() 拓展
+# += 运算符
 
 ```c++
 template<typename T, typename K>
 void operator+=(std::vector<T> &v, const K &k)
 {
-	v.push_back(static_cast<T>(k));
+    v.push_back(static_cast<T>(k));
 }
 ```
 
