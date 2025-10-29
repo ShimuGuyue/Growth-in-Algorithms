@@ -22,5 +22,17 @@ void operator+=(std::vector<T> &v, const K &k)
 }
 ```
 
+# 前缀 ++ 运算符
 
+```c++
+template<typename T>
+void operator++(std::vector<T> &v)
+{
+    v.emplace_back();
+    for (size_t i = v.size() - 1; i > 0; --i)
+    {
+        std::swap(v[i], v[i - 1]);
+    }
+}
+```
 
